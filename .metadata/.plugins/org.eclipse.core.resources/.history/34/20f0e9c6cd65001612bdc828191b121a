@@ -1,0 +1,65 @@
+.section .text
+
+// GpioOLED:	.word 0x41230000
+
+.set OLED_COLS, 16				// Number of column on the display
+.set OLED_FONT_OFFSET, 0x10000	// Offset from OLED base address to font table buffer
+.set OLED_CHAR_OFFSET, 0x10400	// Offset from OLED base address to character display buffer
+
+
+/*
+Inputs:
+	r0: character
+	r1: x
+	r2: y
+*/
+.global OLED_print_char
+.func OLED_print_char
+OLED_print_char:
+	push {r4, lr}
+
+	add r3, r1, r2, lsl #4			// Calculate character offset
+
+	// Determine start address
+	ldr r4, =GpioOLED
+	ldr r4, [r4]					// Load base address for OLED
+	add r4, #OLED_CHAR_OFFSET		// Go to OLED character buffer
+	add r4, r3						// Move to correct position
+
+	strb r0, [r4]					// Print character
+
+	pop {r4, pc}
+.endfunc
+
+
+/*
+Inputs:
+	r0: address of null-terminated string
+	r1: x
+	r2: y
+*/
+.global OLED_print_string
+.func OLED_print_string
+OLED_print_string:
+	push {r4, r5, lr}
+
+	add r3, r1, r2, lsl #4			// Calculate character offset
+
+	// Determine start address
+	ldr r4, =GpioOLED
+	ldr r4, [r4]					// Load base address for OLED
+	add r4, #OLED_CHAR_OFFSET		// Go to OLED character buffer
+	add r4, r3						// Move to correct position
+
+	OLED_print_string_loop:
+		ldrb r5, [r0], #1			// Get character
+		cmp r5, #0					// Check for null-terminator
+		beq OLED_print_string_loop_exit
+
+		strb r5, [r4], #1			// Print character
+		b OLED_print_string_loop
+	OLED_print_string_loop_exit:
+
+	pop {r4, r5, pc}
+.endfunc
+

@@ -1,0 +1,21 @@
+
+#include "axi_oled_controller.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+
+extern void asm_main();
+
+int main() {
+	/*
+	 XStatus test = AXI_OLED_CONTROLLER_Mem_SelfTest((void*)0x41230000);
+	while(test == XST_FAILURE)
+		;
+	*/
+	char *arr = "abc";
+	AXI_OLED_CONTROLLER_mWriteMemory(0x41230000 + 0x10400, arr);
+	asm_main();
+
+	return 0;
+}

@@ -1,0 +1,419 @@
+.section .data
+.section .text
+
+//Define the base addresses of the GPIO ports we might want to use.
+.align		//align the variable to 4 bytes word boundary
+GpioBTN:	.word 0x41200000
+GpioLED:	.word 0x41210000
+GpioSW: 	.word 0x41220000
+GpioOLED:	.word 0x41230000
+
+OLEDController:	.word 0x41230000
+
+.global asm_main   // make asm_main visible to the linker program
+
+.func asm_main
+asm_main:
+	push {lr}
+
+	gameInit:
+		ldr r0, =playerPosition
+		mov r1, #0
+		str r1, [r0]
+
+		ldr r0, =enemyPositionsCurrIdx
+		mov r1, #0
+		str r1, [r0]
+
+		ldr r0, =displayString
+		mov r1, #DISPLAY_STRING_SIZE
+		mov r2, #0
+		bl memclear
+
+		ldr r0, =enemyPositions
+		mov r1, #ENEMY_POSITIONS_SIZE
+		mov r2, #NO_ENEMY
+		bl memclear
+
+		//!todo: score, WAIT_TIME
+
+	gameLoop:
+		bl checkCollision
+		bl updateButtonState
+		bl updatePositions
+		bl updateDisplay
+		bl syncFPS
+
+		b gameLoop
+
+	gameOver:
+		b gameOver
+
+	pop {lr}
+	bx lr  // Return from function call
+.endfunc
+
+
+/*
+	if (playerPosition == enemyPosition(0))
+		goto gameOver;
+*/
+checkCollision:
+	push {lr}
+
+	mov r0, #0
+	bl getEnemyPositionAtOffset
+
+	ldr r1, =playerPosition
+	ldr r1, [r1]
+
+	cmp r0, r1
+	// beq gameOver
+	//!todo
+
+	pop {lr}
+	mov pc, lr
+
+
+// Update buttonState
+updateButtonState:
+	//!todo
+	mov pc, lr
+
+
+updatePositions:
+	push {lr}
+
+	bl movePlayer
+	bl generateEnemy
+	bl moveEnemies
+
+	pop {lr}
+	mov pc, lr
+
+
+/*
+	if(buttonState & BUTTON_LEFT && playerPosition > 0)
+		playerPosition--;
+
+	if(buttonState & BUTTON_RIGHT && playerPosition < SCREEN_ROWS - 1)
+		playerPosition++;
+*/
+movePlayer:
+	push {lr}
+
+	ldr r0, =buttonState
+	ldr r0, [r0]
+
+	ldr r2, =playerPosition
+	ldr r3, [r2]
+
+	movePlayer_left:
+		tst r0, #BUTTON_LEFT
+		beq movePlayer_right
+		cmp r3, #POSITION_MIN
+		ble movePlayer_right
+
+		sub r3, #1
+		str r3, [r3]
+
+	movePlayer_right:
+		tst r0, #BUTTON_RIGHT
+		beq movePlayer_return
+		cmp r3, #POSITION_MAX
+		bge movePlayer_return
+
+		add r3, #1
+		str r3, [r3]
+
+	movePlayer_return:
+	pop {lr}
+	mov pc, lr
+
+
+/*
+	enemyPositionsCurrIdx++;
+	if(enemyPositionsCurrIdx >= ENEMIES_MAX)
+		enemyPositionsCurrIdx = 0;
+*/
+moveEnemies:
+	ldr r0, =enemyPositionsCurrIdx
+	ldr r1, [r0]
+	add r1, #1
+
+	cmp r1, #ENEMIES_MAX
+	movge r1, #0
+
+	str r1, [r0]
+
+	mov pc, lr
+
+
+/*
+	enemyPositions[enemyPositionsCurrIdx] = getRandom() % SCREEN_ROWS;
+*/
+generateEnemy:
+	push {lr}
+
+	bl getRandom
+	and r0, #ENEMY_RANDOM_MASK
+
+	ldr r1, =enemyPositionsCurrIdx
+	ldr r1, [r1]
+	ldr r2, =enemyPositions
+	strb r0, [r2, r1]
+
+	pop {lr}
+	mov pc, lr
+
+
+/*
+xorshift
+http://excamera.com/sphinx/article-xorshift.html
+
+  seed ^= seed << 13;
+  seed ^= seed >> 17;
+  seed ^= seed << 5;
+  return seed;
+
+Return values:
+	r0: random number between 0 and 0xFFFFFFFF
+*/
+getRandom:
+	ldr r1, =seed
+	ldr r0, [r1]
+	eor r0, r0, lsl #13
+	eor r0, r0, lsr #17
+	eor r0, r0, lsl #5
+	str r0, [r1]
+	// bl MT_Extract
+	mov pc, lr
+
+
+updateDisplay:
+	push {lr}
+
+	bl generateDisplayString
+
+	ldr r0, =displayString
+	mov r1, #0
+	mov r2, #0
+	bl OLED_print_string
+
+	pop {lr}
+	mov pc, lr
+
+
+/*
+Input:
+	r0: address of memory block
+	r1: size of memory block in bytes
+	r2: default byte value
+*/
+memclear:
+	memclear_loop:
+		cmp r1, #0
+		ble memclear_return
+	
+		strb r2, [r0], #1
+		sub r1, #1
+		b memclear_loop
+
+	memclear_return:
+	mov pc, lr
+
+
+/*
+Input:
+	r0: Offset
+Output:
+	r0: enemyPositions[(enemyPositionsCurrIdx + Offset) % ENEMIES_MAX]
+*/
+getEnemyPositionAtOffset:
+	ldr r1, =enemyPositions
+	ldr r2, =enemyPositionsCurrIdx
+	ldr r2, [r2]
+	add r3, r0, r2
+	cmp r3, #ENEMIES_MAX
+	subge r3, #ENEMIES_MAX
+	ldrb r0, [r1, r3]
+	mov pc, lr
+
+
+generateDisplayString:
+	push {r4-r7, lr}
+	ldr r4, =displayString
+	ldr r5, =playerPosition
+	ldr r5, [r5]
+
+	// Clear display string with spaces
+	mov r0, r4
+	mov r1, #DISPLAY_STRING_LENGTH
+	mov r2, #CHAR_SYMBOL_EMPTY
+	bl memclear
+
+	// Ensure null-terminated string
+	mov r0, #0
+	add r1, r4, #DISPLAY_STRING_LENGTH
+	strb r0, [r1]
+
+	mov r7, #CHAR_SYMBOL_ENEMY
+	mov r6, #0
+	generateDisplayString_enemiesLoop:
+		mov r0, r6
+		bl getEnemyPositionAtOffset
+
+		mov r3, #SCREEN_COLUMNS
+		mul r3, r0
+		add r3, r6
+
+		cmp r0, #NO_ENEMY
+		beq generateDisplayString_noEnemy
+		strb r7, [r4, r3]		// Write enemy character
+
+		generateDisplayString_noEnemy:
+		add r6, #1
+		cmp r6, #ENEMIES_MAX
+		blt generateDisplayString_enemiesLoop
+
+	// Draw player
+	// Check if enemyPosition(0) == playerPosition
+	mov r0, #0
+	bl getEnemyPositionAtOffset
+	mov r7, #CHAR_SYMBOL_PLAYER
+	cmp r0, r5
+	moveq r7, #CHAR_SYMBOL_EXPLOSION
+
+	mov r3, #SCREEN_COLUMNS
+	mul r3, r5
+	strb r7, [r4, r3]
+
+	pop {r4-r7, lr}
+	mov pc, lr
+
+
+/*
+
+Input:
+	r0: cycles
+*/
+waitCycles:
+	waitCycles_loop:
+		subs r0, #1
+		bne waitCycles_loop
+	mov pc, lr
+
+
+/*
+	syncTick = syncTick + WAIT_TIME;
+	while (getTick() < syncTick);
+*/
+/*
+syncFPS:
+	push {r4, lr}
+
+	ldr r0, =WAIT_TIME
+	ldr r1, =syncTick
+	ldr r4, [r1]
+	add r4, r0
+	str r4, [r1]
+
+	syncFPS_loop:
+		bl getTick
+		cmp r0, r4
+		blt syncFPS_loop
+
+	pop {r4, lr}
+	mov pc, lr
+*/
+syncFPS:
+	push {lr}
+
+	mov r0, #WAIT_CYCLES
+	bl waitCycles
+	
+	pop {lr}
+	mov pc, lr
+
+
+/*
+Return values:
+	r0: system timer
+*/
+getTick:
+	//!todo
+	mov pc, lr
+
+
+.equ BUTTON_CENTER, 0x00  // #(1 << n)
+.equ BUTTON_LEFT, 0x00
+.equ BUTTON_RIGHT, 0x00
+
+.equ CHAR_SYMBOL_EMPTY, ' '
+.equ CHAR_SYMBOL_ENEMY, 'X'
+.equ CHAR_SYMBOL_EXPLOSION, '+'
+.equ CHAR_SYMBOL_PLAYER, '>'
+
+.equ DISPLAY_STRING_LENGTH, 32	// SCREEN_ROWS * SCREEN_COLUMNS
+.equ DISPLAY_STRING_SIZE, 33	// DISPLAY_STRING_LENGTH + 1
+
+.equ ENEMY_POSITIONS_SIZE, 64	// ENEMIES_MAX * 4
+.equ ENEMY_RANDOM_MASK, 0x01
+.equ ENEMIES_MAX, 16
+.equ NO_ENEMY, 0xFF
+
+.equ POSITION_MAX, 1
+.equ POSITION_MIN, 0
+
+.equ SCREEN_COLUMNS, 16
+.equ SCREEN_ROWS, 2
+
+.equ WAIT_TIME, 100
+.equ WAIT_CYCLES, 0x00FFFFFF
+
+
+.data
+	.align
+	buttonState: .space 1
+	.align
+	displayString: .space DISPLAY_STRING_SIZE
+	.align
+	enemyPositions: .space ENEMY_POSITIONS_SIZE
+	.align
+	enemyPositionsCurrIdx: .space 4
+	playerPosition: .space 4
+	score: .space 4
+	syncTick: .space 4
+
+	seed: .word 123456789
+
+.end;
+
+
+/*
+Todo:
+
+Functions:
+	updateButtonState
+	getTick
+
+Technical:
+	Does data allocated need to be word-aligned?
+	.ascii(z)
+	Fix off-by-one errors related to enemy position idx
+	Watch your ldr/str vs ldrb/strb
+	(str)|(ldr)[^b]
+
+Playability:
+	WAIT_TIME speeds up as game progresses
+	WELCOME screen
+	Gameover instantly restarts?
+	To make playable ensure not impossible?
+
+Simpler alternative: jumping game?
+
+Sprites:
+	.set OLED_FONT_OFFSET, 0x10000
+	// offset from OLED base address to font table buffer
+
+*/

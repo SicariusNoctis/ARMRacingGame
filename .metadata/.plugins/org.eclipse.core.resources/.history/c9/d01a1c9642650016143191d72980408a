@@ -1,0 +1,7 @@
+extern void asm_main();
+
+int main() {
+	asm_main();
+	AXI_OLED_CONTROLLER_mWriteMemor(null);
+	return 0;
+}

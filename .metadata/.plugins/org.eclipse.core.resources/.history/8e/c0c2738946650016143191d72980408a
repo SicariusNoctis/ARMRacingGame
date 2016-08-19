@@ -1,0 +1,15 @@
+
+#include "axi_oled_controller.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+
+extern void asm_main();
+
+int main() {
+	AXI_OLED_CONTROLLER_Mem_SelfTest(0x41230000);
+	asm_main();
+	// AXI_OLED_CONTROLLER_mWriteMemory(null, null);
+	return 0;
+}

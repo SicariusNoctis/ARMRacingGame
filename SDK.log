@@ -1,0 +1,280 @@
+02:49:32 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+02:49:39 INFO  : XSDB server has started successfully.
+02:51:42 INFO  : Project 'hw_platform' created. You can now create BSPs and application projects targeting this hardware platform.
+03:14:45 INFO  : System reset is completed.
+03:14:52 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+03:14:58 INFO  : ps7_init is completed.
+03:14:58 INFO  : ps7_post_config is completed.
+03:17:20 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+03:19:52 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+03:19:58 INFO  : XSDB server has started successfully.
+03:31:17 INFO  : System reset is completed.
+03:31:23 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+03:31:27 INFO  : ps7_init is completed.
+03:31:27 INFO  : ps7_post_config is completed.
+03:45:15 INFO  : System reset is completed.
+03:45:20 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+03:45:25 INFO  : ps7_init is completed.
+03:45:25 INFO  : ps7_post_config is completed.
+05:43:28 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+05:43:32 INFO  : XSDB server has started successfully.
+06:21:46 INFO  : System reset is completed.
+06:21:50 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:21:54 INFO  : ps7_init is completed.
+06:21:54 INFO  : ps7_post_config is completed.
+06:24:36 INFO  : System reset is completed.
+06:24:40 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:24:41 INFO  : ps7_init is completed.
+06:24:41 INFO  : ps7_post_config is completed.
+06:26:44 INFO  : System reset is completed.
+06:26:51 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:26:55 INFO  : ps7_init is completed.
+06:26:55 INFO  : ps7_post_config is completed.
+06:28:52 INFO  : System reset is completed.
+06:28:56 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:28:57 INFO  : ps7_init is completed.
+06:28:58 INFO  : ps7_post_config is completed.
+06:50:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:50:18 INFO  : System reset is completed.
+06:50:22 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:50:25 INFO  : ps7_init is completed.
+06:50:25 INFO  : ps7_post_config is completed.
+06:52:22 INFO  : System reset is completed.
+06:52:26 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:52:29 INFO  : ps7_init is completed.
+06:52:29 INFO  : ps7_post_config is completed.
+06:54:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:54:38 INFO  : System reset is completed.
+06:54:43 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:54:46 INFO  : ps7_init is completed.
+06:54:46 INFO  : ps7_post_config is completed.
+06:56:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:56:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:56:29 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:56:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:56:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:56:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:57:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:57:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:57:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:57:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:58:03 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+06:58:03 WARN  : Terminating existing sessions on processor ps7_cortexa9_0
+06:59:00 INFO  : System reset is completed.
+06:59:05 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+06:59:08 INFO  : ps7_init is completed.
+06:59:08 INFO  : ps7_post_config is completed.
+07:00:45 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:00:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:08:55 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+07:14:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:13:09 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+17:13:13 INFO  : XSDB server has started successfully.
+18:53:18 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+18:53:22 INFO  : XSDB server has started successfully.
+20:15:03 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+20:15:07 INFO  : XSDB server has started successfully.
+22:23:05 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+22:23:09 INFO  : XSDB server has started successfully.
+22:26:27 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+22:26:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:26:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248469137" && level==0} -index 1' command is executed.
+22:26:45 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+22:27:06 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+22:27:12 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+22:27:17 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+22:27:33 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:806)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:311)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+22:28:00 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: The program file specified in the launch configuration does not exist
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:580)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+22:28:54 INFO  : System reset is completed.
+22:29:00 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+22:29:02 INFO  : ps7_init is completed.
+22:29:03 INFO  : ps7_post_config is completed.
+00:28:50 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+00:28:54 INFO  : XSDB server has started successfully.
+00:48:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:48:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:48:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:50:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:50:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:50:31 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:50:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:54:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+00:55:06 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:55:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:05:28 INFO  : System reset is completed.
+01:10:26 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+01:10:31 INFO  : XSDB server has started successfully.
+01:13:11 INFO  : System reset is completed.
+01:13:15 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+01:13:17 INFO  : ps7_init is completed.
+01:13:17 INFO  : ps7_post_config is completed.
+01:21:15 INFO  : System reset is completed.
+01:21:20 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+01:21:21 INFO  : ps7_init is completed.
+01:21:21 INFO  : ps7_post_config is completed.
+01:26:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:41:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+01:43:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:03:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:06:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:18:44 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+02:18:47 INFO  : XSDB server has started successfully.
+02:19:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:26:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:40:24 INFO  : Processor reset is completed for ps7_cortexa9_0
+02:56:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:09:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:10:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:13:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+03:15:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:07:48 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:08:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:09:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:09:21 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+05:09:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:13:14 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+05:13:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:14:04 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+05:14:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:29:47 INFO  : Launching XSDB server: xsdb.bat -interactive C:\dev\zed.sdk\temp_xsdb_launch_script.tcl
+05:29:52 INFO  : XSDB server has started successfully.
+05:31:06 ERROR : Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+05:31:07 ERROR : Unexpected error while launching program.
+com.xilinx.sdk.targetmanager.TMException: Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+	at com.xilinx.sdk.targetmanager.internal.TM.isFPGAConfigured(TM.java:374)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.isFpgaConfigured(XilinxAppLaunchConfigurationDelegate.java:409)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:303)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+05:31:19 INFO  : System reset is completed.
+05:31:28 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+05:31:33 INFO  : ps7_init is completed.
+05:31:33 INFO  : ps7_post_config is completed.
+05:32:16 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+05:38:48 INFO  : System reset is completed.
+05:38:58 INFO  : FPGA configured successfully with bitstream "C:/dev/zed.sdk/hw_platform/design_1_wrapper.bit"
+05:39:02 INFO  : ps7_init is completed.
+05:39:02 INFO  : ps7_post_config is completed.
+05:39:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+05:39:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:41:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:44:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+05:44:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:55:57 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:57:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+05:57:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+05:59:38 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:01:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:01:17 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:01:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:02:43 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:02:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:03:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:03:56 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:05:14 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:05:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:26:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:26:42 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:26:50 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:39:18 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:39:20 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:51:46 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:51:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+06:55:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+06:55:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:20:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:20:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:20:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:20:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:22:15 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:22:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:23:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:23:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:40:21 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:40:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:42:49 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:42:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:45:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:45:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:51:14 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:51:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:52:25 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:52:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:54:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+07:54:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+07:59:56 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+08:00:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:00:18 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+08:00:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:01:53 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+08:01:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+08:03:52 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+08:07:48 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -1,12 +1,12 @@
-ARM Assembly project for ENSC 254
+**ARM Assembly project for ENSC 254**
 
 ZedBoard  
 IC: Xilinx Zynq®-7000 All Programmable SoC  
 Processor type: ARM
 
-## Subroutine/functions overview
+### Subroutines/functions
 
-#### display.s
+#### arm.s
 
 	asm_main
 	checkCollision
